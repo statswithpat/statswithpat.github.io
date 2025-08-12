@@ -1,0 +1,168 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #007acc;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Navbar */
+.navbar {
+  background: #007acc;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Hero section */
+.hero {
+  background: #007acc;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* Content sections */
+.content-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.content-section h2 {
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #007acc;
+  padding-bottom: 0.3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+}
+
+.card a {
+  color: #007acc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card a:hover,
+.card a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #007acc;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 8px;
+  }
+
+  .nav-links[hidden] {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.show {
+    display: flex !important;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+}
+
+/* Focus styles for keyboard users */
+a:focus, button:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
