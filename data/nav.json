@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "title": "Mean (Average)",
+      "url": "/concepts/mean.html",
+      "category": "Descriptive Statistics",
+      "tags": [
+        "mean",
+        "average",
+        "expected value"
+      ],
+      "summary": "Definition, formula, and interactive examples for the arithmetic mean."
+    },
+    {
+      "title": "Median",
+      "url": "/concepts/median.html",
+      "category": "Descriptive Statistics",
+      "tags": [
+        "median",
+        "center",
+        "resistant"
+      ],
+      "summary": "Understanding the median and when to use it instead of the mean."
+    }
+  ]
+}

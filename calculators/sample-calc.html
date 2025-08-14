@@ -1,0 +1,45 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sample Calculator</title>
+  <style>
+    body{font-family: ui-sans-serif, system-ui; margin:0; background:#0b0e14; color:#e6eaf2}
+    .wrap{display:grid; place-items:center; min-height:100vh; padding:1rem}
+    .card{background:#11151f; border:1px solid #20283a; border-radius:16px; padding:1.25rem; max-width:540px; width:100%}
+    input,button{padding:.6rem .8rem; border-radius:10px; border:1px solid #20283a; background:#0b0e14; color:#e6eaf2}
+    button{cursor:pointer}
+    button:focus,input:focus{outline:3px solid #ffd166}
+    .row{display:flex; gap:.5rem; flex-wrap:wrap; align-items:center}
+    label{min-width:5rem}
+    .out{margin-top:.75rem; min-height:2.5rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Sample calculator">
+      <h1>Quick Mean Calculator</h1>
+      <p>Enter numbers separated by commas:</p>
+      <div class="row">
+        <label for="nums">Values</label>
+        <input id="nums" type="text" placeholder="e.g., 1, 2, 3, 4"/>
+        <button id="calc">Compute</button>
+      </div>
+      <div id="out" class="out" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+  <script>
+    function mean(arr){ return arr.reduce((a,b)=>a+b,0)/arr.length; }
+    document.getElementById('calc').addEventListener('click', ()=>{
+      const raw = document.getElementById('nums').value.trim();
+      if(!raw){ document.getElementById('out').textContent='Please enter some numbers.'; return; }
+      const arr = raw.split(',').map(s=>Number(s.trim())).filter(n=>Number.isFinite(n));
+      if(!arr.length){ document.getElementById('out').textContent='No valid numbers found.'; return; }
+      const m = mean(arr);
+      document.getElementById('out').textContent = 'Mean = ' + m.toFixed(4);
+    });
+  </script>
+</body>
+</html>

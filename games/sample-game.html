@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sample Game</title>
+  <style>
+    body{font-family: ui-sans-serif, system-ui; margin:0; background:#0b0e14; color:#e6eaf2}
+    .wrap{display:grid; place-items:center; min-height:100vh; padding:1rem}
+    .card{background:#11151f; border:1px solid #20283a; border-radius:16px; padding:1.25rem; max-width:540px; width:100%}
+    button{padding:.75rem 1rem; border-radius:12px; border:1px solid #20283a; background:#0b0e14; color:#e6eaf2; cursor:pointer}
+    button:focus{outline:3px solid #ffd166}
+    .out{margin-top:.75rem; min-height:2.5rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Sample game">
+      <h1>Sample Clicker</h1>
+      <p>Click to earn a random score. Replace this file with your HTML5 game.</p>
+      <button id="play">Play</button>
+      <div id="out" class="out" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('play').addEventListener('click', ()=>{
+      const pts = Math.floor(Math.random()*100);
+      document.getElementById('out').textContent = 'You scored ' + pts + ' points!';
+    });
+  </script>
+</body>
+</html>
