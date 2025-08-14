@@ -1,0 +1,50 @@
+
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.monster {
+  width: 100px;
+  height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button.selected {
+  background-color: #444;
+  border: 2px solid white;
+}
+
+button.correct {
+  background-color: #2ecc71;
+  color: black;
+}
+
+button.wrong {
+  background-color: #e74c3c;
+  color: black;
+}
+
+.highlight-ring {
+  stroke: #FFD700;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 5px #FFD700) drop-shadow(0 0 8px #FFD700);
+}
