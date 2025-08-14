@@ -21,6 +21,17 @@
         "resistant"
       ],
       "summary": "Understanding the median and when to use it instead of the mean."
+    },
+        {
+      "title": "Samples and Populations",
+      "url": "/concepts/samples-and-populations.html",
+      "category": "Statistics Concepts",
+      "tags": [
+        "sample",
+        "population",
+        "groups"
+      ],
+      "summary": "Understanding the difference between samples and populations."
     }
   ]
 }
