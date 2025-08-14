@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monster Classification Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <h1>Monster Classification Game</h1>
+    <div id="score-board">
+      Score: <span id="score">0</span> | Round: <span id="round">1</span>/10
+    </div>
+    <div id="grid"></div>
+    <div id="question-area">
+      <p id="question">Loading question...</p>
+      <div id="answers"></div>
+      <button id="submit-answer">Submit</button>
+      <button id="next-round" disabled>Next</button>
+      <p id="feedback"></p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
